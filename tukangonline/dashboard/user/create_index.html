@@ -117,13 +117,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Pesanan Tukang</h1>
+                            <h1 class="m-0">Daftar Pesanan</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Pesanan Tukang</li>
+                                <li class="breadcrumb-item active">Daftar Pesanan</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -133,6 +133,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+
+            <div class="d-flex justify-content-end mr-5 mb-3">
+                <a href="create.html" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                <!-- <a href="create.html"><i class="fas fa-edit"></i></a>
+                <a><i class="fas fa-trash-alt"></i></a> -->
+            </div>
 
             <!-- Main content -->
             <div class="content">
@@ -147,59 +153,68 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th>Nama Pesanan</th>
+                                        <th>Action</th>
+                                        <th>Tukang</th>
                                         <th>Chat</th>
-                                        <th>Status</th>
+                                        <th>status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Tukang 1</td>
+                                        <td>Perbaikan Atap</td>
                                         <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
-                                            <a class="btn btn-app" role="button" href="../chat.html">
-                                                <span class="badge bg-info">2</span>
-                                                <i class="fas fa-comment-dots"></i>Chat
-                                              </a>
+                                                <a href="create.html" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning">Berjalan</span>
+                                            <span class="badge badge-warning">Mencari</span>
                                         </td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Tukang 2</td>
+                                        <td>Perbaikan Dinding</td>
                                         <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
-                                            <a class="btn btn-app" role="button" href="../chat.html">
-                                                <span class="badge bg-info">2</span>
-                                                <i class="fas fa-comment-dots"></i>Chat
-                                              </a>
+                                            <a href="create.html" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a  class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                         <td>
                                             <!-- <div class="color-palette-set">
-                                                <div class="bg-warning color-palette"><span>berjalan</span></div>
+                                                <div class="bg-success color-palette"><span>Tukang 1</span></div>
                                             </div> -->
-                                            <span class="badge badge-warning">Berjalan</span>
+                                            <span class="badge badge-success">Tukang 1</span>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Tukang 3</td>
                                         <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
                                             <a class="btn btn-app" role="button" href="../chat.html">
                                                 <span class="badge bg-info">2</span>
                                                 <i class="fas fa-comment-dots"></i>Chat
                                               </a>
                                         </td>
+                                        <td><span class="badge badge-warning">Berjalan</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Perbaikan Dinding</td>
                                         <td>
-                                            <div class="color-palette-set">
-                                                <!-- <div class="bg-success color-palette"><span>selesai</span></div> -->
-                                                <span class="badge badge-success">Selesai</span>
-                                            </div>
+                                            <a href="create.html" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a  class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
+                                        <td>
+                                            <!-- <div class="color-palette-set">
+                                                <div class="bg-success color-palette"><span>Tukang 1</span></div>
+                                            </div> -->
+                                            <span class="badge badge-success">Tukang 1</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-app" role="button" href="../chat.html">
+                                                <span class="badge bg-info">2</span>
+                                                <i class="fas fa-comment-dots"></i>Chat
+                                              </a>
+                                        </td>
+                                        <td><span class="badge badge-success">Selesai</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -285,7 +300,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             });
         });
     </script>
-
 </body>
 
 </html>

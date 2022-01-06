@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="index.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Pesanan Tukang
+                                    Pesanan
                                 </p>
                             </a>
                         </li>
@@ -99,7 +99,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="create_index.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Buat Pesanan
+                                    Ambil Pesanan
                                 </p>
                             </a>
                         </li>
@@ -117,13 +117,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Pesanan Tukang</h1>
+                            <h1 class="m-0">Detail</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Pesanan Tukang</li>
+                                <li class="breadcrumb-item active">Detail</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -135,80 +135,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">DataTable with default features</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Widget: user widget style 1 -->
+                        <div class="card card-widget widget-user">
+                        <!-- Add the bg color to the header using any of the bg-* classes -->
+                            <div class="widget-user-header text-white"
+                                style="background: url('../../assets/vendor/dist/img/photo1.png') center center;">
+                                <h3 class="widget-user-username text-right">Elizabeth Pierce</h3>
+                            </div>
+                            <div class="widget-user-image">
+                                <img class="img-circle" src="../../assets/vendor/dist/img/user3-128x128.jpg" alt="User Avatar">
+                            </div>
+                            <div class="card-footer">
+                                <a href="index.html" class="btn btn-primary d-flex justify-content-center">Ambil</a>
+                            </div>
+
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Chat</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tukang 1</td>
-                                        <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
-                                            <a class="btn btn-app" role="button" href="../chat.html">
-                                                <span class="badge bg-info">2</span>
-                                                <i class="fas fa-comment-dots"></i>Chat
-                                              </a>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">Berjalan</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Tukang 2</td>
-                                        <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
-                                            <a class="btn btn-app" role="button" href="../chat.html">
-                                                <span class="badge bg-info">2</span>
-                                                <i class="fas fa-comment-dots"></i>Chat
-                                              </a>
-                                        </td>
-                                        <td>
-                                            <!-- <div class="color-palette-set">
-                                                <div class="bg-warning color-palette"><span>berjalan</span></div>
-                                            </div> -->
-                                            <span class="badge badge-warning">Berjalan</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Tukang 3</td>
-                                        <td>
-                                            <!-- <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i><span class="badge badge-warning navbar-badge">15</span></a> -->
-                                            <a class="btn btn-app" role="button" href="../chat.html">
-                                                <span class="badge bg-info">2</span>
-                                                <i class="fas fa-comment-dots"></i>Chat
-                                              </a>
-                                        </td>
-                                        <td>
-                                            <div class="color-palette-set">
-                                                <!-- <div class="bg-success color-palette"><span>selesai</span></div> -->
-                                                <span class="badge badge-success">Selesai</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
+                        <!-- /.widget-user -->
                     </div>
-                    <!-- /.row -->
+                    <div class="col-md-6">
+                        <!-- Box Comment -->
+                        <div class="card card-widget">
+                          <div class="card-header">
+                            <div class="user-block">
+                              <img class="img-circle" src="../../assets/vendor/dist/img/user1-128x128.jpg" alt="User Image">
+                              <span class="username"><a href="#">Elizabeth Pierce</a></span>
+                              <span class="description">Shared publicly - 7:30 PM Today</span>
+                            </div>
+                            <!-- /.user-block -->
+                            <!-- <div class="card-tools">
+                              <button type="button" class="btn btn-tool" title="Mark as read">
+                                <i class="far fa-circle"></i>
+                              </button>
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                              </button>
+                              <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                              </button>
+                            </div> -->
+                            <!-- /.card-tools -->
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                            <img class="img-fluid pad" src="../../assets/vendor/dist/img/photo2.png" alt="Photo">
+            
+                            <p>Perbaikan Keramik rusak</p>
+                            <p>12 Desember 2021</p>
+                            <p>07.077</p>
+                          </div>
+                          <!-- /.card-body -->
+                          
+                          <!-- /.card-footer -->
+                        </div>
+                        <!-- /.card -->
+                      </div>
                 </div>
-                <!-- /.container-fluid -->
             </div>
             <!-- /.content -->
         </div>
@@ -286,6 +270,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
         });
     </script>
 
+<script>
+    function buatPesanan() {
+        swal({
+            title: "Yakin?",
+            // text: "Setelah membuat, Anda tidak dapat mengembalikan",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((response) => {
+            if (response) {
+                // swal("", {
+                // icon: "success",
+                // // Simulate a mouse click:
+                // });
+                window.location.href = "user/index.html";
+            } 
+        });   
+    }
+</script>
 </body>
 
 </html>

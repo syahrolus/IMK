@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="../assets/vendor/plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
     <!-- <link rel="stylesheet" href="../assets/vendor/dist/css/adminlte.min.css"> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
@@ -172,7 +173,7 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action="user/index.html">
+                <form id="pesan" >
                     <div class="card-body">
                         <div class="form-group">
                             <label for="alamat">Alamat</label>
@@ -206,13 +207,35 @@
                     </div>
                     <!-- /.card-body -->
 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Pesan</button>
-                    </div>
+                    
                 </form>
+                <div class="card-footer">
+                    <button type="submit" onclick="tambahTukang()" class="btn btn-primary">Pesan</button>
+                </div>
             </div>
         </div>
         <!-- End Portfolio Details Section -->
+
+        <script>
+            function tambahTukang() {
+                swal({
+                    title: "Yakin?",
+                    text: "Setelah memilih, Anda tidak dapat mengembalikan",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                    if (willDelete) {
+                        // swal("", {
+                        // icon: "success",
+                        // // Simulate a mouse click:
+                        // });
+                        window.location.href = "user/index.html";
+                    } 
+                });   
+            }
+        </script>
 
     </main>
     <!-- End #main -->

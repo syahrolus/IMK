@@ -20,6 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="../../assets/vendor/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../assets/vendor/dist/css/adminlte.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -96,7 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="create.html" class="nav-link">
+                            <a href="create_index.html" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Buat Pesanan
@@ -117,13 +118,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Pesanan Tukang</h1>
+                            <h1 class="m-0">Buat Pesanan</h1>
                         </div>
                         <!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Pesanan Tukang</li>
+                                <li class="breadcrumb-item active">Buat Pesanan</li>
                             </ol>
                         </div>
                         <!-- /.col -->
@@ -135,76 +136,61 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- /.content-header -->
 
             <!-- Main content -->
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">DataTable with default features</h3>
-                        </div>
-                        <!-- /.card-header -->
+            <div class="container">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Pesan</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="pesan" >
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Chat</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tukang 1</td>
-                                        <td>
-                                            <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i></a>
-                                        </td>
-                                        <td>
-                                            <div class="color-palette-set">
-                                                <div class="bg-warning color-palette"><span>berjalan</span></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Tukang 2</td>
-                                        <td>
-                                            <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i></a>
-                                        </td>
-                                        <td>
-                                            <div class="color-palette-set">
-                                                <div class="bg-warning color-palette"><span>berjalan</span></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Tukang 3</td>
-                                        <td>
-                                            <a href="../chat.html" class="btn btn-success" role="button"><i class="fas fa-comment-dots"></i></a>
-                                        </td>
-                                        <td>
-                                            <div class="color-palette-set">
-                                                <div class="bg-success color-palette"><span>selesai</span></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Chat</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                            <div class="form-group">
+                                <label for="nama">Nama Pesanan</label>
+                                <input type="text" class="form-control" id="nama" placeholder="*Perbaikan Tembok">
+                            </div>
+                            <div class="form-group">
+                                <label for="deskripsi">Deskripsi</label>
+                                <input type="text" class="form-control" id="deskripsi" placeholder="Tulis detail yang akan diperbaiki">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" placeholder="Masukkan Alamat">
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal dan Waktu:</label>
+                                <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime" />
+                                    <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">Lampirkan gambar yang akan diperbaiki</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-check"> -->
+                            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+                            <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                            <!-- </div> -->
                         </div>
                         <!-- /.card-body -->
+
+                        
+                    </form>
+                    <div class="card-footer">
+                        <button type="submit" onclick="buatPesanan()" class="btn btn-primary">Buat Pesanan</button>
                     </div>
-                    <!-- /.row -->
                 </div>
-                <!-- /.container-fluid -->
             </div>
             <!-- /.content -->
         </div>
@@ -281,6 +267,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             });
         });
     </script>
+
+<script>
+    function buatPesanan() {
+        swal({
+            title: "Yakin?",
+            // text: "Setelah membuat, Anda tidak dapat mengembalikan",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((response) => {
+            if (response) {
+                // swal("", {
+                // icon: "success",
+                // // Simulate a mouse click:
+                // });
+                window.location.href = "create_index.html";
+            } 
+        });   
+    }
+</script>
 </body>
 
 </html>

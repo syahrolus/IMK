@@ -29,6 +29,13 @@
     <link rel="stylesheet" href="../assets/vendor/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../assets/vendor/dist/css/adminlte.min.css">
 
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="../assets/vendor/plugins/fontawesome-free/css/all.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../assets/vendor/plugins/select2/css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../assets/vendor/dist/css/adminlte.min.css">
+
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
 
@@ -102,6 +109,62 @@
             </div>
         </section>
         <!-- End Breadcrumbs -->
+
+        <!-- <div class="content-wrapper"> -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <h2 class="text-center display-4">Pencarian</h2>
+                    <form action="enhanced-results.html">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="row">
+                                    <!-- <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Result Type:</label>
+                                            <select class="select2" multiple="multiple" data-placeholder="Any" style="width: 100%;">
+                                                <option>Text only</option>
+                                                <option>Images</option>
+                                                <option>Video</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Sort Order:</label>
+                                            <select class="select2" style="width: 100%;">
+                                                <option selected>ASC</option>
+                                                <option>DESC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Order By:</label>
+                                            <select class="select2" style="width: 100%;">
+                                                <option selected>Nama</option>
+                                                <option>Rating</option>
+                                                <option>Jarak Lokasi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                        <input type="search" class="form-control form-control-lg" placeholder="Masukkan pencarian" value="">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-lg btn-default">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+          <!-- </div> -->
 
         <section class="inner-page">
             <div class="container">
@@ -513,6 +576,22 @@
 
     <!-- Template Main JS File -->
     <script src="../assets/js/main.js"></script>
+
+    <script src="../assets/vendor/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../assets/vendor/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="../assets/vendor/plugins/select2/js/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../assets/vendor/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="../assets/vendor/dist/js/demo.js"></script> -->
+
+    <script>
+        $(function () {
+          $('.select2').select2()
+        });
+    </script>
 
 </body>
 
